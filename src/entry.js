@@ -1,4 +1,4 @@
-var npmTemplate = require('./cli/clones/npm.js');
+var newTemplate = require('./cli/core/new.js')
 module.exports = {
-	npmTemplate : npmTemplate.npmTemplate
+	newTemplate,
 }
