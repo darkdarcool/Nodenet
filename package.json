@@ -1,0 +1,17 @@
+{
+  "name": "@darkdarcool30/nodenet",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "simple-git": "^2.39.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": "./nodenet",
+  "keywords": [],
+  "author": "darkdarcool30",
+  "license": "MIT"
+}

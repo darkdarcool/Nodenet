@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+var myentry = require('./src/entry.js');
+var arg1 = process.argv[2];
+if (process.argv[2] == undefined) {
+	console.log("No args made");
+	process.exit()
+} else if (arg1 == 'new') {
+	if (process.argv[3] == undefined) {
+		console.log("List of node templates");
+	} else {
+		console.log("We got a template name here");
+	}
+}
+// myentry.npmTemplate();
