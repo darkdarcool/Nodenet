@@ -15,3 +15,9 @@ else if (arg1 == 'new') {
 else if (arg1 == 'test') {
 	utils.test();
 }
+else if (arg1 == '--help' || arg1 == '-h') {
+	console.log(chalk.white.bold("Structure:\n") + chalk.grey.bold("	nodenet <command> [args]\n") + chalk.white.bold("Commands:\n	new : Create a template for node like:[npm, console, ect.\n	test: Make a test for your node project using jest or chitchatjs"))
+}
+else {
+	console.log(chalk.red.bold("Unknown command."));
+}
