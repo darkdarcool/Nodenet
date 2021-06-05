@@ -12,3 +12,6 @@ if (process.argv[2] == undefined) {
 else if (arg1 == 'new') {
 	utils.newTemplate()
 }
+else if (arg1 == 'test') {
+	utils.test();
+}
