@@ -17,7 +17,7 @@ Then you can start using Nodenet! Nodenet is ***not*** meant for requiring it in
 
 # Usage
 
-Please visit our [usage]() readme for information on how to use Nodenet. 
+Please visit our [Usage](https://github.com/darkdarcool/Nodenet/blob/master/docs/Usage.md) readme for information on how to use Nodenet. 
 
 # Contributing
 
