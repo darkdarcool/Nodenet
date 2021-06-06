@@ -11,7 +11,7 @@ You must have node installed, which if you don't have, you can get [here](https:
 Once you have it installed, please in your terminal do:
 
 ``` bash
-npm i -g nodenet
+we don't have on yet!
 ```
 Then you can start using Nodenet! Nodenet is ***not*** meant for requiring it in code. While nothing will happen if you do, it will just be a waste of codespace.
 

@@ -1,1 +1,3 @@
-// Empty file since it's just a CLI.
+// Storm the user for using this in their file if import, let's see how they react...
+console.log("Nodenet is just a package! Not a CLI! Please do not require it!");
+process.exit(0);

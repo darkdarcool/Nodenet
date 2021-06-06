@@ -6,7 +6,7 @@ var utils = require('./src/entry.js');
 
 var arg1 = process.argv[2];
 if (process.argv[2] == undefined) {
-	console.log("No args made");
+	console.log(chalk.red.bold("No args made"));
 	process.exit()
 } 
 else if (arg1 == 'new') {

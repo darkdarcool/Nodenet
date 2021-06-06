@@ -1,4 +1,5 @@
-var templates = require('../clones/npm.js')
+var npm = require('../clones/npm.js')
+var consolet = require('../clones/console.js')
 var chalk = require('chalk');
 var options = `
 
@@ -15,10 +16,21 @@ function newTemplate() {
 	}
 	else if (process.argv[3] == "npm") {
 		try {
-			templates.npmTemplate();
+			npm.npmTemplate();
 			clearLastLine();
 			clearLastLine();
 			clearLastLine();
+		}
+		catch {
+			console.log(chalk.red.bold("An error occured when cloning template."));	
+		}
+	}
+	else if (process.argv[3] == "console") {
+	  try {
+			consolet.consoleTemplate()
+			//clearLastLine()
+			//clearLastLine()
+			//clearLastLine()
 		}
 		catch {
 			console.log(chalk.red.bold("An error occured when cloning template."));	
