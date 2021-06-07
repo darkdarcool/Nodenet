@@ -1,5 +1,17 @@
 const fs = require("fs")
 var chalk = require('chalk');
+function retrive() {
+	console.log(chalk.blue.bold('Extracting file cores...'))
+}
+function decoding() {
+	console.log(chalk.blue.bold('Decoding files...'))
+}
+function writing() {
+	console.log(chalk.blue.bold("Writing files..."))
+}
+function done() {
+	console.log(chalk.green.bold(`Succesfully created console project! Please open '${file}' and read the README.md and start editing!`))
+}
 function makeSrc() {
 	fs.mkdir(`./${file}/src/`, function(err) {
 		if (err) {
@@ -47,10 +59,13 @@ function consoleTemplate() {
 			process.exit(0)
   	} 
 	});
-	setTimeout(makeSrc, 1000)
-	setTimeout(makeIndex, 1000)
-	setTimeout(makeMd, 1000);
-	console.log(chalk.green.bold(`Succesfully created console project! Please open '${file}' and read the README.md and start editing!`));
+	setTimeout(retrive, 5000)
+	setTimeout(makeSrc, 5000)
+	setTimeout(decoding, 6000)
+	setTimeout(makeIndex, 6000)
+	setTimeout(writing, 7000)
+	setTimeout(makeMd, 7000);
+	setTimeout(done, 7500)
 }
 
 module.exports = {
