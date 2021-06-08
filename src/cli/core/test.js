@@ -25,7 +25,7 @@ function test() {
 		process.exit(0);
 	}
 	else {
-		exec(`jest $PWD/${process.argv[3]}`, (err, stdout, stderr) => {
+		exec(`jest $PWD/${process.argv[3]} `,{stdio:'inherit'}, (err, stdout, stderr) => {
   		if (err) {
 				e = process.argv[3]
     		if (e.indexOf('.test.') == -1) {
