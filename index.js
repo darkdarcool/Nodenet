@@ -1,3 +1,3 @@
-// Storm the user for using this in their file if import, let's see how they react...
-console.log("Nodenet is just a CLI! Not a package! Please do not require it!");
+var chalk = require('chalk')
+console.log(chalk.red.bold("Nodenet is just a CLI! Please do not require it!"));
 process.exit(0);
