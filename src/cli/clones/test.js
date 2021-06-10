@@ -1,5 +1,6 @@
 const fs = require("fs")
 var chalk = require('chalk');
+var file;
 function retrive() {
 	console.log(chalk.blue.bold('Extracting file cores...'))
 }
@@ -13,17 +14,21 @@ function done() {
 	console.log(chalk.green.bold(`Succesfully created test directory! Please open 'tests' and start testing!`))
 }
 function makeTestDir() {
-	fs.mkdir(`./tests/`, function(err) {
+	fs.mkdir(`./${file}/tests/`, function(err) {
 		if (err) {
 			console.log(err);
 		}
 	});
 }
 function makeJest() {
-  fs.appendFile(`./tests/main.test.js`, "var add = require('../add.js');\ntest('Returns add correctly', () => {\n  expect(add(4, 5)).toBe(9)});'")
+  fs.appendFile(`./${file}/tests/main.test.js`, "var add = require('../add.js');\ntest('Returns add correctly', () => {\n  expect(add(4, 5)).toBe(9);\n});", function (err) {
+    if (err) {
+      console.log(err);
+    }
+  })
 }
 function makeTestFile() {
-	fs.appendFile(`./add.js`,"function add(num1, num2) {\n  return num1 + num2;\n}\n\nmodule.exports = add", function (err) {
+	fs.appendFile(`./${file}/add.js`,"function add(num1, num2) {\n  return num1 + num2;\n}\n\nmodule.exports = add", function (err) {
 		if (err) {
 			console.log(err);
 		}
@@ -31,19 +36,30 @@ function makeTestFile() {
 }
 // 4
 
-var readme = `# Console-Template
-Console template for Nodenet
-
-You can run \`node src/index.js\` to run your program, and then edit out index.js to your hearts content!
-`
 function testTemplate() {
-
+  if (process.argv[4] == "-o" || process.argv[4] == "-out") {
+    if (process.argv[5] == undefined) {
+      console.log(chalk.red.bold("Outdir cannot be null"));
+    }
+    else {
+      file = process.argv[5]
+    }
+  }
+  else {
+    file = "testDir"
+  }
+  fs.mkdir(`${file}`, function(err) {
+  	if (err) {
+			console.log(chalk.red.bold(`'${file}' already exists.`));
+			process.exit(0)
+  	} 
+	});
 	setTimeout(retrive, 5000)
 	setTimeout(makeTestFile, 5000)
 	setTimeout(decoding, 6000)
 	setTimeout(makeTestDir, 6000)
 	setTimeout(writing, 7000)
-	setTimeout(makeTestFile, 7000);
+	setTimeout(makeJest, 7000);
 	setTimeout(done, 7500)
 }
 
