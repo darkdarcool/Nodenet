@@ -5,7 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "chalk": "^4.1.1",
-    "nexe": "^4.0.0-beta.18",
+    "chitchatsjs": "^0.0.9",
+    "jest": "^27.0.4",
+    "nexe": "^1.1.6",
     "pkg": "^5.2.1",
     "shelljs": "^0.8.4",
     "simple-git": "^2.39.0"

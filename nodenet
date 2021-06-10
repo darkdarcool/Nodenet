@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+var info = require('./package.json')
 const fs = require("fs");
 const { exec } = require('child_process');
 var chalk = require('chalk')
@@ -17,6 +18,12 @@ else if (arg1 == 'test') {
 }
 else if (arg1 == '--help' || arg1 == '-h') {
 	console.log(chalk.white.bold("Structure:\n") + chalk.grey.bold("	nodenet <command> [args]\n") + chalk.white.bold("Commands:\n	new : Create a template for node like:[npm, console, ect.\n	test: Make a test for your node project using jest or chitchatjs"))
+}
+else if (arg1 == '-v' || arg1 == '--version') {
+  console.log(chalk.green.bold(`v${info.version}`));
+}
+else if (arg1 == 'add' || arg1 == "install") {
+  utils.add();
 }
 else {
 	console.log(chalk.red.bold("Unknown command."));
