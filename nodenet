@@ -17,7 +17,7 @@ else if (arg1 == 'test') {
 	utils.test();
 }
 else if (arg1 == '--help' || arg1 == '-h') {
-	console.log(chalk.white.bold("Structure:\n") + chalk.grey.bold("	nodenet <command> [args]\n") + chalk.white.bold("Commands:\n	new : Create a template for node like:[npm, console, ect.\n	test: Make a test for your node project using jest or chitchatjs"))
+	console.log(chalk.white.bold("Structure:\n") + chalk.grey.bold("	nodenet <command> [args]\n") + chalk.white.bold("Commands:\n	new : Create a template for node like:[npm, console, ect.\n	test: Make a test for your node project using jest or chitchatjs\n        add/install : Installs npm package to your project. It cannot install global packages"))
 }
 else if (arg1 == '-v' || arg1 == '--version') {
   console.log(chalk.green.bold(`v${info.version}`));
