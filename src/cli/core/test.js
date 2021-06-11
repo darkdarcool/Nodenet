@@ -7,7 +7,6 @@ const clearLastLine = () => {
 function test() {
 	console.log("Starting tests...");
 	if (process.argv[3] == "--chitchat" || process.argv[3] == "-chit") {
-		console.log(process.argv[3])
 		if (process.argv[4] == undefined) {
 			console.log(chalk.red.bold("File cannot be null"));
 			process.exit(0);
