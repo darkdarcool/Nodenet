@@ -48,3 +48,50 @@ nodenet add mynpmpackage
 Add can also be `install`.
 
 Then nodenet will compile down to bash and request the npm cli to install the package you request and will give the the output in the files and terminal the npm returns.
+
+## Templates
+
+This command will give you templates that can be used for quick starting projects. There are few currently operational, but more are coming out every day!
+
+Here is how you use the command:
+
+``` shell
+nodenet new templatename
+```
+If you would like the see a list of templates, please do:
+
+``` shell
+nodenet new
+```
+And then the templates name and description will come up.
+
+When you decide which template to use, it makes a dir, and the dir's name is defaulting to a not very exciting or related to your projects name, so to change it you can make the outDir name like this:
+
+``` shell
+nodenet new templatename -o myDirName
+```
+And then nodenet will clone your files into your dir! And you will have quick started a project!
+
+### Run
+
+Run is a command that is very simple, it runs scripts from your package.json using npm.
+
+When you make package.json, there is a scripts part to it with all of the commands and what you want them to do. Nodenet will do the same by using npm. 
+
+Say you have a build command in your scripts in your package.json, in npm you would do:
+
+``` shell
+npm run build
+```
+And in Nodenet, it's practicly the same! If you do:
+
+```
+nodenet run build
+```
+It will run the same command! But if you want colors, make sure to find out how to force them, or nodenet can't render thim in your terminal!
+
+# Conclusion
+
+That's all of the commands for now, Nodenet is still in beta and is constantly changing, and I hope to see you using it!
+
+Bye!
